@@ -1,11 +1,10 @@
 const express = require('express');
+const tweetsRoute = require('./routes/tweets');
+const healthRoute = require('./routes/health');
 require('dotenv').config();
 
 const app = express();
 PORT = process.env.PORT || 3000;
-
-const tweetsRoute = require('./routes/tweets');
-const healthRoute = require('./routes/health');
 
 app.use('/health', healthRoute);
 app.use('/tweets', tweetsRoute);
@@ -15,3 +14,6 @@ app.all('/*', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
+
+
+module.exports = app;

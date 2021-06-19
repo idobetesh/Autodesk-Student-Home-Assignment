@@ -1,10 +1,10 @@
-# Autodesk-Student-Home-Assignment
+# Home-Assignment
 
 ## Live API on Heroku
 `https://stormy-springs-57792.herokuapp.com/`
 
 ## Examples:
-### 1. Get machine specs:
+### 1. Get machine current status:   
 `https://stormy-springs-57792.herokuapp.com/health`
 #### Response:
     {
@@ -13,7 +13,7 @@
         "memory_usage": 97.2796,
         "CPU_usage": 60.6211
     }
-### 2. Get 10 recent tweets containig 'Autodesk':
+### 2. Get 10 recent tweets containing the word 'Autodesk':
 `https://stormy-springs-57792.herokuapp.com/tweets?query=Autodesk`
 #### Response:
     {
@@ -51,7 +51,7 @@
 ## Run Locally
 1. Make sure to have docker-CLI installed on your machine<br>
 2. Navigate to the project directory 
-3. In the tweet.js file insert your tweeter private keys as follow: <br>
+3. In the tweet.js file insert your twitter private keys as follow: <br>
 ####
         const T = new Twit({
             consumer_key: <YOUR_CONSUMER_KEY>,
